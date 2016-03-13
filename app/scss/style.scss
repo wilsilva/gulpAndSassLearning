@@ -1,0 +1,80 @@
+@import 'variables.scss';
+@import 'style-font.scss';
+
+.testing
+{
+    width: percentage(5/7);
+}
+
+
+@mixin border-radius($radius)
+{
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+            border-radius: $radius;
+        -ms-border-radius: $radius;
+}
+
+.btn
+{
+    font-family: $font-stack;
+    font-size: 1.25em;
+
+    min-width: 10%;
+    min-height: 2em;
+
+    transition: .4s ease-in;
+
+    color: $whiteColor;
+    border: 1px solid $greenColor500;
+    background: $greenColor500;
+
+    @include border-radius(5px);
+    &:hover
+    {
+        transition: .4s ease-in;
+
+        border: 1px solid $greenColor600;
+        background: $greenColor600;
+    }
+}
+
+.side-bar ul
+{
+    width: 12.5em;
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    text-align: center;
+
+    background-color: $whiteColor;
+}
+
+.side-bar li a
+{
+    display: block;
+    //			 top  left	bottom	right	 para o magin e outros é a mesma coisa
+
+    padding: 8px  0   8px 	0;
+
+    text-decoration: none;
+
+    color: $textColor;
+    &:hover
+    {
+        color: $whiteColor;
+        background-color: $greyColor500;
+    }
+}
+
+.side-bar .active
+{   
+    background-color: $greenColor500;
+    color: $whiteColor;
+
+    &:hover{
+    	background-color: $greenColor600;    	
+    }
+}
